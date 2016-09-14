@@ -84,7 +84,7 @@ function [y, u, v] = yuvRead(vid, width, height, nFrame)
 
 
 fid = fopen(vid,'r');           % Open the video file
-stream = fread(fid,'uchar');    % Read the video file
+stream = fread(fid,'*uchar');    % Read the video file
 length = 1.5 * width * height;  % Length of a single frame
 
 y = uint8(zeros(height,   width,   nFrame));
